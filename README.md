@@ -1,4 +1,7 @@
-# FM-DACL: Dual Agreement Consistency Learning with Foundation Models  
+# FM-DACL: Dual Agreement Consistency Learning with Foundation Models 
+
+<em>Dual Agreement Consistency Learning with Foundation Models for Semi-Supervised Fetal Heart Ultrasound Segmentation and Diagnosis</em>
+
 ### ISBI 2026 FETUS Challenge Submission
 
 This repository contains the official implementation of **FM-DACL**, a semi-supervised learning framework for fetal heart ultrasound segmentation and diagnosis developed for the **[ISBI 2026 FETUS Challenge (Fetal HearT UltraSound Segmentation and Diagnosis)](http://119.29.231.17:90/)**.
