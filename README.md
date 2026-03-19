@@ -124,7 +124,7 @@ Example inference command:
 ```
 python step_2_inference.py \
     --data-json /root/FM-DACL/data/validation.json \
-    --ckpt /root/FM-DACL/log/EchoCare_resunet_consist_391/mambaunet_best_model1.pth \
+    --ckpt /root/FM-DACL/log/EchoCare_resunet_consist_391/best_model1.pth \
     --out-dir /root/FM-DACL/predictions \
     --mask-mode oracle \
     --cls-thr 0.5 \
