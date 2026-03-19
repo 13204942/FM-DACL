@@ -1,49 +1,49 @@
-python train_semi_swin_unet_consist.py --root_path /root/autodl-tmp/FETUS2026/log --exp EchoCare_Unet --max_iterations 78200
+python train_semi_echocare_unet_consist.py --root_path /root/FM-DACL/log --exp EchoCare_Unet --max_iterations 78200
 
-python train_semi_swin_unet_cps.py --root_path /root/autodl-tmp/FETUS2026/log --exp EchoCare_Unet_CPS --max_iterations 78200
+python train_semi_echocare_unet_cps.py --root_path /root/FM-DACL/log --exp EchoCare_Unet_CPS --max_iterations 78200
 
-python train_semi_swin_unet_cps.py --root_path /root/autodl-tmp/FETUS2026/log --exp EchoCare_ResUnet_CPS --max_iterations 78200 --base_lr 0.0001
+python train_semi_echocare_unet_cps.py --root_path /root/FM-DACL/log --exp EchoCare_ResUnet_CPS --max_iterations 78200 --base_lr 0.0001
 
-python train_semi_swin_unet_consist.py --root_path /root/autodl-tmp/FETUS2026/log --exp EchoCare_resunet_consist --batch_size 7 --max_iterations 117300 
+python train_semi_echocare_unet_consist.py --root_path /root/FM-DACL/log --exp EchoCare_resunet_consist --batch_size 7 --max_iterations 117300 
 
-python train_semi_segformer_resunet_consist.py --root_path /root/autodl-tmp/FETUS2026/log --exp Segformer_resunet_consist --batch_size 7 --max_iterations 117300 
+python train_semi_segformer_resunet_consist.py --root_path /root/FM-DACL/log --exp Segformer_resunet_consist --batch_size 7 --max_iterations 117300 
 
 python step_2_inference.py \
-    --data-json /root/autodl-tmp/FETUS2026/data/validation.json \
-    --ckpt /root/autodl-tmp/FETUS2026/log/EchoCare_ResUnet_CPS_391/mambaunet_best_model1.pth \
-    --out-dir /root/autodl-tmp/FETUS2026/predictions \
+    --data-json /root/FM-DACL/data/validation.json \
+    --ckpt /root/FM-DACL/log/EchoCare_ResUnet_CPS_391/mambaunet_best_model1.pth \
+    --out-dir /root/FM-DACL/predictions \
     --mask-mode oracle \
     --cls-thr 0.5 \
     --gpu 0
     
 python step_2_inference.py \
-    --data-json /root/autodl-tmp/FETUS2026/data/validation.json \
-    --ckpt /root/autodl-tmp/FETUS2026/log/EchoCare_ResUnet_CPS_391/model1_iter_78200.pth \
-    --out-dir /root/autodl-tmp/FETUS2026/predictions \
+    --data-json /root/FM-DACL/data/validation.json \
+    --ckpt /root/FM-DACL/log/EchoCare_ResUnet_CPS_391/model1_iter_78200.pth \
+    --out-dir /root/FM-DACL/predictions \
     --mask-mode oracle \
     --cls-thr 0.5 \
     --gpu 0
     
 python step_2_inference.py \
-    --data-json /root/autodl-tmp/FETUS2026/data/validation.json \
-    --ckpt /root/autodl-tmp/FETUS2026/log/EchoCare_resunet_consist_391/mambaunet_best_model1.pth \
-    --out-dir /root/autodl-tmp/FETUS2026/predictions \
+    --data-json /root/FM-DACL/data/validation.json \
+    --ckpt /root/FM-DACL/log/EchoCare_resunet_consist_391/mambaunet_best_model1.pth \
+    --out-dir /root/FM-DACL/predictions \
     --mask-mode oracle \
     --cls-thr 0.5 \
     --gpu 0
     
 python step_2_inference.py \
-    --data-json /root/autodl-tmp/FETUS2026/data/validation.json \
-    --ckpt /root/autodl-tmp/FETUS2026/log/Segformer_resunet_consist_391/mambaunet_best_model2.pth \
-    --out-dir /root/autodl-tmp/FETUS2026/predictions \
+    --data-json /root/FM-DACL/data/validation.json \
+    --ckpt /root/FM-DACL/log/Segformer_resunet_consist_391/mambaunet_best_model2.pth \
+    --out-dir /root/FM-DACL/predictions \
     --mask-mode oracle \
     --cls-thr 0.5 \
     --gpu 0
     
 python step_2_inference.py \
-    --data-json /root/autodl-tmp/FETUS2026/data/validation.json \
-    --ckpt /root/autodl-tmp/FETUS2026/log/Segformer_resunet_consist_391/mambaunet_best_model1.pth \
-    --out-dir /root/autodl-tmp/FETUS2026/predictions \
+    --data-json /root/FM-DACL/data/validation.json \
+    --ckpt /root/FM-DACL/log/Segformer_resunet_consist_391/mambaunet_best_model1.pth \
+    --out-dir /root/FM-DACL/predictions \
     --mask-mode oracle \
     --cls-thr 0.5 \
     --gpu 0
